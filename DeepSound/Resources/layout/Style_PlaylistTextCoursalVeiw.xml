@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:minHeight="150dp"
+	android:background="?attr/colorPrimary">
+    <LinearLayout
+		android:id="@+id/boxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:minHeight="120dp"
+        android:background="#efefef" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:gravity="start|center"
+        android:layout_gravity="start|center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_medium"                
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:text="@string/Lbl_Songs"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/countSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="13sp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                 />
+        </LinearLayout>
+        <View
+			android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_verticle_black"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:layout_gravity="start|center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginStart="@dimen/spacing_medium"
+                
+                android:text="@string/Lbl_Created"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/timeCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

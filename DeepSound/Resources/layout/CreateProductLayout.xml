@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorPrimary"
+	android:orientation="vertical">
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top" 
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="@drawable/linear_gradient_drawable"
+		android:elevation="2dp" >
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/Lbl_Save"
+			android:layout_gravity="end"
+			android:textSize="15sp"
+			android:padding="15dp"
+			android:id="@+id/toolbar_title" />
+	</androidx.appcompat.widget.Toolbar>
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nested_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:clipToPadding="false"
+		android:scrollbars="none"
+		android:scrollingCache="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout
+			android:id="@+id/lyt_form"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="15dp">
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+			<!--Title Section -->
+			<LinearLayout
+				android:id="@+id/LayoutTitle"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/TitleEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:hint="@string/Lbl_Title"
+					android:textSize="15sp"
+					android:gravity="start|center"
+					android:inputType="text"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+			<!--Description Section -->
+			<LinearLayout
+				android:id="@+id/LayoutDescription"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/DescriptionEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="80dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:hint="@string/Lbl_Description"
+					android:inputType="text"
+					android:textSize="15sp"
+					android:gravity="start"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+			 
+			<!--Tags Section -->
+			<LinearLayout
+				android:id="@+id/LayoutTags"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+
+				<EditText
+					android:id="@+id/TagsText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:hint="@string/Lbl_Tags"
+					android:textSize="15sp"
+					android:gravity="start"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+
+			<!--Price Section -->
+			<LinearLayout
+				android:id="@+id/PriceType"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/PriceText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:hint="@string/Lbl_Price"
+					android:textSize="15sp"
+					android:gravity="start|center"
+					android:inputType="number"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+
+			<!--Total Item Units Section -->
+			<LinearLayout
+				android:id="@+id/TotalItemType"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/TotalItemText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:hint="@string/Lbl_TotalItemUnits"
+					android:textSize="15sp"
+					android:gravity="start|center"
+					android:inputType="number"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+
+			<!--Related To Song Section -->
+			<LinearLayout
+				android:id="@+id/LayoutRelatedToSong"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/RelatedToSongText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:hint="@string/Lbl_RelatedToSong"
+					android:textSize="15sp"
+					android:gravity="start|center"
+					android:inputType="text"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+
+			<!--Category Section -->
+			<LinearLayout
+				android:id="@+id/LayoutCategory"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<EditText
+					android:id="@+id/CategoryText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="45dp"
+					android:hint="@string/Lbl_Category"
+					android:textSize="15sp"
+					android:inputType="text"
+					android:gravity="start|center"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+			 
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="10dp" />
+
+			<TextView
+				android:id="@+id/AddImagesText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="30dp"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:text="@string/Lbl_AddImages"
+				android:textSize="12dp" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/imageRecyler"
+				android:layout_marginTop="10dp"
+				android:layout_marginEnd="0dp"
+				android:layout_marginStart="20dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:scrollbars="vertical" />
+			<View
+				android:layout_height="?android:attr/actionBarSize"
+				android:layout_width="match_parent" />
+			<com.google.android.gms.ads.doubleclick.PublisherAdView
+				android:id="@+id/multiple_ad_sizes_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+				app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

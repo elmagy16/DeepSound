@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootChatWindowView"
+    app:backgroundTint="#00000000">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp" 
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyler"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="ltr"
+            android:scrollbars="vertical" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/firstLiner"
+		android:layout_width="match_parent"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal"
+		android:background="?attr/colorFill"
+		android:gravity="center_vertical"
+		android:layout_height="wrap_content">
+      <at.markushi.ui.CircleButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:cb_color="?attr/colorPrimary"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:cb_pressedRingWidth="9dip"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:src="@drawable/ImageAttach"
+        android:tint="#444"
+        android:id="@+id/imageButton" />
+      <androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/emojiicon"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_action_sentiment_satisfied_alt"
+            android:scaleType="fitCenter"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentStart="true"
+			android:layout_marginTop="0dp"
+			android:layout_marginStart="8dp" />
+		<developer.semojis.Helper.EmojiconEditText
+			android:id="@+id/EmojiconEditText5"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_alignParentStart="true"
+			android:layout_marginStart="6dp"
+			android:textSize="19dp"
+			android:hint="@string/Lbl_Write_your_message"
+			app:emojiconSize="23sp"
+			android:backgroundTint="@android:color/transparent"
+			android:background="@android:color/transparent"
+			android:layout_gravity="center"
+			android:maxLines="6"
+			android:textColorHint="@color/text_color_in_between"
+			android:textColor="@color/text_color_in_between"
+			android:layout_marginBottom="0dp"
+			android:paddingStart="20dp"
+			android:paddingEnd="70dp" />	
+    </LinearLayout> 
+	<at.markushi.ui.CircleButton
+		android:layout_width="70dp"
+		android:layout_height="70dp"
+        android:forceDarkAllowed="false"
+		app:cb_color="@color/accent"
+		app:cb_pressedRingWidth="13dip"
+		android:src="@drawable/SendLetter"
+		android:id="@+id/sendButton"
+		android:translationY="3dp"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentBottom="true"
+		android:layoutDirection="ltr" />
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/backgroundimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/LoginImage"
+            android:scaleType="centerCrop" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@color/primary_transparent" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+            <LinearLayout
+                android:id="@+id/layout01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="@string/Lbl_SignUp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="50dp" />
+                <EditText
+	                android:id="@+id/edt_firstname"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:layout_weight="1"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_FirstName"
+	                android:inputType="textEmailAddress" />
+                <EditText
+	                android:id="@+id/edt_lastname"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:layout_weight="1"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_LastName"
+	                android:inputType="textEmailAddress" />
+                <EditText
+	                android:id="@+id/edt_email"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:layout_weight="1"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_Email"
+	                android:inputType="textEmailAddress" />
+                <EditText
+	                android:id="@+id/edt_username"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_Username"
+	                android:inputType="textEmailAddress" />
+                <EditText
+	                android:id="@+id/edt_password"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_Password"
+	                android:inputType="textPassword" />
+                <EditText
+	                android:id="@+id/edt_Confirmpassword"
+	                style="@style/EditTextNormalStyle"
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:textColor="@color/white"
+	                android:theme="@style/DefaultEditText"
+	                android:hint="@string/Lbl_ConfirmPassword"
+	                android:inputType="textPassword" />
+                <RelativeLayout
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progressBar"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="true"
+                        android:visibility="invisible"
+                        android:gravity="center_horizontal"
+                        android:progressTint="@color/white" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/shape_radius_white_btn"
+                        android:layout_height="45dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="18dp"
+                        android:padding="12dp"
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:text="@string/Lbl_Create_An_Account"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        android:clickable="true"
+                        android:textAllCaps="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:id="@+id/SignInButton" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/termstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:text="@string/Lbl_By_registering_you_agree_to_our"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/SignBigText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Lbl_Already_Have_an_Account"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

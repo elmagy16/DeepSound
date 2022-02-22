@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="?attr/colorPrimary"
+    android:layout_height="match_parent">
+    <!--Head Page -->
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:id="@+id/IconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="&gt;"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp" />
+        <TextView
+            android:id="@+id/titlepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_centerVertical="true"
+            android:text="@string/Lbl_Filter"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            android:layout_marginStart="61dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#efefef" />
+    </RelativeLayout>
+    <!--Price Section -->
+    <RelativeLayout
+        android:id="@+id/LayoutPrice"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/IconPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="#"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp" />
+        <TextView
+            android:id="@+id/PriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_centerVertical="true"
+            android:text="@string/Lbl_Price"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/IconPrice" />
+        <TextView
+            android:id="@+id/PricePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/Lbl_SelectAll"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:layout_marginEnd="40dp" />
+
+        <ImageView
+            android:id="@+id/PriceMoreIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_right"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="#efefef" />
+    </RelativeLayout>
+    <!--Genres Section -->
+    <RelativeLayout
+        android:id="@+id/LayoutGenres"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/IconGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="#"
+            android:textSize="20sp"
+            android:layout_marginStart="25dp" />
+        <TextView
+            android:id="@+id/GenresTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_centerVertical="true"
+            android:text="@string/Lbl_Genres"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/IconGenres" />
+        <TextView
+            android:id="@+id/GenresPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/Lbl_SelectAll"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:layout_marginEnd="40dp" />
+        <ImageView
+            android:id="@+id/GenresMoreIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_right"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="#efefef" />
+    </RelativeLayout>
+    <!--Buttons Section -->
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/SelectAllbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/Lbl_SelectAll"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/accent"
+            android:forceDarkAllowed="false"
+            android:textAllCaps="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ApplyButton"
+            android:forceDarkAllowed="false"
+            android:background="@drawable/follow_button_profile_friends_pressed"
+            android:layout_height="36dp"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/Lbl_ApplyFilter"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+        <View
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</LinearLayout>

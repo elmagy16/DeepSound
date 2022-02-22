@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="?attr/colorPrimary"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:id="@+id/TopSection"
+		android:layout_alignParentTop="true"
+		android:layout_width="match_parent"
+		android:background="?attr/ShapeCircleColor6"
+		android:layout_height="50dp">
+		<TextView
+			android:id="@+id/toolbartitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="0dp"
+			android:text="@string/Lbl_Trending"
+			android:textSize="25sp"
+			android:textStyle="bold"
+			android:gravity="start"
+			android:layout_marginStart="15dp"
+			android:layout_centerVertical="true"
+			android:layout_alignParentStart="true" />
+	</RelativeLayout>
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/swipeRefreshLayout"
+		android:layout_below="@+id/TopSection"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<androidx.core.widget.NestedScrollView
+			android:id="@+id/ScrollView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clickable="true"
+			android:focusable="false"
+			android:focusableInTouchMode="true"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior">
+			<LinearLayout
+				android:orientation="vertical"
+				android:background="?attr/colorPrimary"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+				<ViewStub
+					android:id="@+id/viewStubEvent"
+					android:inflatedId="@+id/stubViewEvent"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="10dp"
+					android:layout="@layout/TemplateRecyclerViewLayout" />
+				<ViewStub
+					android:id="@+id/viewStubPublicePlaylist"
+					android:inflatedId="@+id/stubViewPublicePlaylist"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="10dp"
+					android:layout="@layout/TemplateRecyclerViewLayout" />
+				<ViewStub
+					android:id="@+id/viewStubBlog"
+					android:inflatedId="@+id/stubViewBlog"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="10dp"
+					android:layout="@layout/TemplateRecyclerViewLayout" />
+				<ViewStub
+					android:id="@+id/viewStub"
+					android:inflatedId="@+id/subView"
+					android:layout_marginTop="35dp"
+					android:layout_centerInParent="true"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:layout="@layout/EmptyStateLayout"
+					android:layout_width="match_parent"
+					android:layout_height="350dp" />
+				<View
+					android:layout_height="?attr/actionBarSize"
+					android:layout_width="match_parent" />
+
+				<com.google.android.gms.ads.doubleclick.PublisherAdView
+					android:id="@+id/multiple_ad_sizes_view"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true"
+					android:layout_centerHorizontal="true"
+					app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+					app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+
+				<View
+					android:layout_height="?attr/actionBarSize"
+					android:layout_width="match_parent" />
+
+			</LinearLayout>
+		</androidx.core.widget.NestedScrollView>
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	<ProgressBar
+		android:layout_centerInParent="true"
+		android:id="@+id/progress"
+		android:layout_gravity="center"
+		android:layout_width="40dp"
+		android:layout_height="40dp" />
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+    	style="@style/Widget.MaterialComponents.FloatingActionButton"
+		android:id="@+id/floatingAdd"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end|bottom"
+		android:clickable="true"
+		app:elevation="6dp"
+		app:pressedTranslationZ="12dp"
+		app:tint="@color/white"
+		app:rippleColor="@android:color/transparent"
+		android:src="@drawable/ic_add"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginEnd="20dp"
+		android:forceDarkAllowed="false"
+		app:backgroundTint="@color/accent"
+		android:layout_marginBottom="66dp" />
+</RelativeLayout>

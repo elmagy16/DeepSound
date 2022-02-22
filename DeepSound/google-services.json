@@ -1,0 +1,141 @@
+{
+  "project_info": {
+    "project_number": "1000400003541",
+    "firebase_url": "https://rd-radiodosis-default-rtdb.firebaseio.com",
+    "project_id": "rd-radiodosis",
+    "storage_bucket": "rd-radiodosis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000400003541:android:41205a52206c5e32e65d5c",
+        "android_client_info": {
+          "package_name": "com.rdmusic.radiodosis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000400003541-c46ce16pkkkl2gj0hpv4uitct702tnq4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmusic.radiodosis",
+            "certificate_hash": "e735c5b2d5837c3697b9a44498a894dcdfad2adc"
+          }
+        },
+        {
+          "client_id": "1000400003541-j1clkrghjhgusj3hibckr8omh4fh9nml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmusic.radiodosis",
+            "certificate_hash": "aac5f2881fda136e10d73ad72d310b1f3ea65bc1"
+          }
+        },
+        {
+          "client_id": "1000400003541-jprf5i8cdc657rl3n4faqt8l46lqoc59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmusic.radiodosis",
+            "certificate_hash": "09ca11daac661df87adf9c616a624cd6341343d9"
+          }
+        },
+        {
+          "client_id": "1000400003541-qjccvn34nb3361m7gucpvblu8g0n37mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmusic.radiodosis",
+            "certificate_hash": "7c79f06d0b298864cff00c41e605fb63920daa9e"
+          }
+        },
+        {
+          "client_id": "1000400003541-svkf294vul5upcgsq8phve0dm7k1gi7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmusic.radiodosis",
+            "certificate_hash": "910dcb302082b686374f125e90668bb2a135ee78"
+          }
+        },
+        {
+          "client_id": "1000400003541-vp8j29rnifkukei8ftkil5kqprqfsgg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Ct8VsuYqZcOtWf1PKpImubxIR-5lowU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000400003541-vp8j29rnifkukei8ftkil5kqprqfsgg2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000400003541-lp4ne5aikb5m0oj6227uvf415f506346.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rdmusic.radiodosis",
+                "app_store_id": "1569547681"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000400003541:android:122ffb8fe1a1ed80e65d5c",
+        "android_client_info": {
+          "package_name": "emisora.radiodosis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000400003541-jt61mq5dh0i771cph54digguosue76g6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "emisora.radiodosis",
+            "certificate_hash": "e735c5b2d5837c3697b9a44498a894dcdfad2adc"
+          }
+        },
+        {
+          "client_id": "1000400003541-uavugk57o3si738scjf9rs6csmk1vpd0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "emisora.radiodosis",
+            "certificate_hash": "910dcb302082b686374f125e90668bb2a135ee78"
+          }
+        },
+        {
+          "client_id": "1000400003541-vp8j29rnifkukei8ftkil5kqprqfsgg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Ct8VsuYqZcOtWf1PKpImubxIR-5lowU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000400003541-vp8j29rnifkukei8ftkil5kqprqfsgg2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000400003541-lp4ne5aikb5m0oj6227uvf415f506346.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rdmusic.radiodosis",
+                "app_store_id": "1569547681"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:background="@android:color/transparent" >
+    <ImageView
+        android:id="@+id/card_pro_pic"
+        android:scaleType="centerCrop"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/no_profile_image_circle" />
+    <com.github.library.bubbleview.BubbleLinearLayout
+        android:orientation="vertical"
+        app:arrowWidth="9dp"
+        app:angle="10dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="10dp"
+        app:arrowLocation="left"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_centerVertical="true"
+        app:bubbleColor="?attr/colorPrimary"
+        app:arrowCenter="false"
+        android:layout_toEndOf="@id/card_pro_pic"
+        android:id="@+id/bubble_layout"
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <DeepSound.Library.Anjo.SuperTextLibrary.SuperTextView
+                android:id="@+id/active"
+                android:layout_marginEnd="13dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                
+                android:textSize="13dp"
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textIsSelectable="true" />
+            <TextView
+                android:layout_height="match_parent"
+                android:id="@+id/time"
+                
+                android:textSize="9dp"
+                android:gravity="bottom"
+                android:layout_margin="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="0"
+                android:translationX="-10dp"
+                android:paddingBottom="2dp" />
+        </LinearLayout>
+    </com.github.library.bubbleview.BubbleLinearLayout>
+    <LinearLayout
+        android:layout_toEndOf="@id/bubble_layout"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/LikeButton">
+        <TextView
+            android:id="@+id/Likeicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+			android:background="@drawable/custom_ripple_red"
+            android:layout_marginStart="5dp"
+            android:text="Ic" />
+        <TextView
+            android:id="@+id/LikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	 android:background="?attr/colorPrimary"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:theme="@style/ToolbarTheme"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:background="@drawable/linear_gradient_drawable"
+        android:elevation="2dp" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:id="@+id/lyt_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <!--Username Section -->
+                <LinearLayout
+                    android:id="@+id/LayoutUsername"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/IconUsername"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="#"
+                        android:textSize="20sp"
+                        
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp" />
+                    <EditText
+                        android:id="@+id/UsernameEditText"
+                        style="@style/EditTextNormalStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/EditTextStyleOne"
+                        android:layout_alignParentEnd="true"
+                        android:hint="@string/Lbl_Username"
+                        android:textSize="15sp"
+                        android:layout_marginStart="3dp" />
+                </LinearLayout>
+                <!--Email Section -->
+                <LinearLayout
+                    android:id="@+id/LayoutEmail"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/IconEmail"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="#"
+                        android:textSize="20sp"
+                        
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp" />
+                    <EditText
+                        android:id="@+id/EmailEditText"
+                        style="@style/EditTextNormalStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/EditTextStyleOne"
+                        android:layout_alignParentEnd="true"
+                        android:hint="@string/Lbl_Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="15sp"
+                        android:layout_marginStart="3dp" />
+                </LinearLayout>
+               <!--Gender Section -->
+                <RelativeLayout
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/IconGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_alignParentStart="true"
+                        android:textSize="20sp"
+                        
+                        android:layout_marginStart="18dp" />
+                    <TextView
+                        android:id="@+id/GenderTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/Lbl_Gender"
+                        android:textSize="14sp"
+                        
+                        android:layout_marginStart="18dp"
+                        android:layout_toEndOf="@+id/IconGender" />
+                    <RadioGroup
+                        android:layout_marginBottom="0dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="@string/Lbl_Male"
+                             />
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_Female"
+                            android:textSize="14sp"
+                            
+                            android:layout_marginStart="10dp" />
+                    </RadioGroup>
+                </RelativeLayout> 
+				<!--Age Section -->
+                <LinearLayout
+                    android:id="@+id/LayoutAge"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/IconAge"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="#"
+                        android:textSize="20sp"
+                        
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp" />
+                    <EditText
+                        android:id="@+id/AgeEditText"
+                        style="@style/EditTextNormalStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/EditTextStyleOne"
+                        android:layout_alignParentEnd="true"
+                        android:hint="@string/Lbl_ChooseYourAge"
+						android:inputType="number"
+                        android:textSize="15sp"
+                        android:layout_marginStart="3dp" />
+                </LinearLayout>
+                <!--Country Section -->
+                <LinearLayout
+                    android:id="@+id/LayoutCountry"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/IconCountry"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="#"
+                        android:textSize="20sp"
+                        
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp" />
+                    <EditText
+                        android:id="@+id/CountryEditText"
+                        style="@style/EditTextNormalStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/EditTextStyleOne"
+                        android:layout_alignParentEnd="true"
+                        android:hint="@string/Lbl_ChooseYourCountry"
+                        android:textSize="15sp"
+                        android:layout_marginStart="3dp" />
+                </LinearLayout>
+                <!--Buttons Section -->
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/ApplyButton"
+                        android:layout_below="@+id/Resetbutton"
+                        android:forceDarkAllowed="false"
+                        android:background="@drawable/follow_button_profile_friends_pressed"
+                        android:layout_height="36dp"
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:text="@string/Lbl_Save"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:clickable="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="19dp"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp" />
+                </LinearLayout> 
+                <RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" >
+	                <com.google.android.gms.ads.doubleclick.PublisherAdView
+		                android:id="@+id/multiple_ad_sizes_view"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentBottom="true"
+		                android:layout_centerHorizontal="true"
+		                app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+		                app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+                </RelativeLayout>  
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+		
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

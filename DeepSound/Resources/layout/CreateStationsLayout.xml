@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mainAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:theme="@style/ToolbarTheme"
+            android:layout_gravity="top"
+            app:layout_collapseMode="pin"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@drawable/linear_gradient_drawable"
+            android:elevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="8"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchViewBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/search_round_corners"
+                    android:theme="@style/SearchViewTheme"
+                    android:queryHint="@string/Lbl_SearchForStation"
+                    android:layout_weight="1"
+                    android:translationX="-4dp"
+                    app:iconifiedByDefault="false" 
+                    
+                    android:textSize="16sp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="0dp" />
+                <TextView
+                    android:id="@+id/filter_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:forceDarkAllowed="false"
+                    android:textColor="@color/accent"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:text="ic"
+					android:visibility="invisible"
+                    android:layout_weight="7"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyler"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:inflatedId="@+id/subView"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:layout="@layout/EmptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:id="@+id/sectionProgress"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+</LinearLayout>

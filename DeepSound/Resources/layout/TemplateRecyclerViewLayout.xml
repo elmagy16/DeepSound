@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <LinearLayout 
+    android:id="@+id/mainLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="8dp"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:layout_gravity="start"
+    android:clickable="true"
+    android:focusable="false">
+    <TextView
+      android:id="@+id/iconTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:layout_alignParentStart="true"
+      android:layout_gravity="start|center"
+      android:layout_marginStart="5dp" />
+    <TextView
+      android:id="@+id/textTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/textTitle"
+      android:textSize="17sp"
+      android:textStyle="bold"
+      android:layout_gravity="start|center"
+      android:layout_marginStart="5dp"
+      android:layout_marginTop="0dp" />
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="30dp">
+      <TextView
+        android:id="@+id/textMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="@string/Lbl_See_More"
+        android:textColor="@color/accent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="12dp"
+        android:padding="8dp" />
+    </RelativeLayout>
+  </LinearLayout> 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="vertical"
+        android:paddingStart="8dp"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

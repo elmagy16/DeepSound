@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="AvatarImageBehavior">
+		<attr name="finalYPosition" format="dimension"/>
+		<attr name="startXPosition" format="dimension"/>
+		<attr name="startToolbarPosition" format="dimension"/>
+		<attr name="startHeight" format="dimension"/>
+		<attr name="finalHeight" format="dimension"/>
+	</declare-styleable>
+	<integer name="app_bar_elevation_anim_duration">0</integer>
+
+	<declare-styleable name="TemplateView">
+		<attr name="gnt_template_type" format="reference"/>
+	</declare-styleable>
+
+	<declare-styleable name="ExtraTheme">
+		<attr name="colorFill" format="reference|color"/>
+		<attr name="colorDivider" format="reference|color"/>
+		<attr name="colorSecondaryExtra" format="reference|color"/>
+		<attr name="ShapeCircleColor1" format="reference|color"/>
+		<attr name="ShapeCircleColor2" format="reference|color"/>
+		<attr name="ShapeCircleColor3" format="reference|color"/>
+		<attr name="ShapeCircleColor4" format="reference|color"/>
+		<attr name="ShapeCircleColor5" format="reference|color"/>
+		<attr name="ShapeCircleColor6" format="reference|color"/>
+	</declare-styleable>
+
+	<declare-styleable name="StoriesProgressView">
+		<attr name="progressCount" format="integer|reference" />
+	</declare-styleable>
+
+	<declare-styleable name="DragToClose">
+		<attr name="draggableView" format="reference" />
+		<attr name="draggableContainer" format="reference" />
+		<attr name="finishActivity" format="boolean" />
+		<attr name="closeOnClick" format="boolean" />
+	</declare-styleable>
+
+</resources>

@@ -1,0 +1,114 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/Transparent_Comment_color"
+    android:id="@+id/root">
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:gravity="start|center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/Lbl_Comment" />
+   <TextView
+		android:id="@+id/IconColse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:gravity="end|center"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_marginEnd="10dp"
+        />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+		android:layout_marginBottom="50dp"
+        android:layout_height="match_parent" 
+        android:layoutDirection="ltr">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyler"
+            android:layout_marginTop="0dp" 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" 
+            android:layoutDirection="ltr" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/commentonButtom"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layoutDirection="ltr">
+        <ImageView
+            android:id="@+id/emojiicon"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_action_sentiment_satisfied_alt"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="8dp" />
+        <developer.semojis.Helper.EmojiconEditText
+            android:id="@+id/EmojiconEditText5"
+            android:layout_alignWithParentIfMissing="@+id/emojiicon"
+            android:layout_toEndOf="@+id/emojiicon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:textSize="14dp"
+            android:hint="@string/Lbl_YourComment"
+            app:emojiconSize="23sp"
+            android:backgroundTint="#f5f5f5"
+            android:background="@android:color/transparent"
+			android:textColor="#f5f5f5"
+            android:layout_gravity="center"
+            android:maxLines="6"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="0dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="70dp" />
+        <at.markushi.ui.CircleButton
+            android:layout_alignWithParentIfMissing="@+id/EmojiconEditText5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:forceDarkAllowed="false"
+            app:cb_color="@color/accent"
+            app:cb_pressedRingWidth="9dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/SendLetter"
+            android:id="@+id/sendButton"
+            android:translationY="2dp"
+            android:layoutDirection="ltr" />
+    </RelativeLayout>
+   <ViewStub
+        android:id="@+id/viewStub"
+        android:inflatedId="@+id/subView"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout="@layout/EmptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/sectionProgress"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#999"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary">
+    <RelativeLayout
+        android:id="@+id/TopSection"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:background="?attr/ShapeCircleColor6"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/proIcon"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:text="ic" 
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp" />
+        <TextView
+            android:id="@+id/toolbartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_toEndOf="@+id/proIcon" 
+            android:text="@string/Lbl_Discover"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true" />
+        <LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" 
+            android:layout_centerVertical="true" 
+            android:orientation="horizontal">
+          <TextView
+            android:id="@+id/searchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingEnd="15dp" 
+            android:paddingStart="10dp" />
+          <TextView
+            android:id="@+id/cartIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingEnd="15dp" 
+            android:paddingStart="10dp" />
+          <TextView
+            android:id="@+id/addIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingEnd="15dp" 
+            android:paddingStart="10dp" />
+          <TextView
+            android:id="@+id/notificationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="ic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingEnd="15dp" 
+            android:paddingStart="10dp" />
+        </LinearLayout> 
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/TopSection"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:id="@+id/Main_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="false"
+                android:layout_marginTop="5dp"
+                android:background="?attr/colorPrimary"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager2"
+                    android:layout_width="match_parent"
+                    android:minHeight="155dp"
+                    android:paddingStart="100dp"
+                    android:paddingEnd="100dp"
+                    android:overScrollMode="never"
+                    android:clipToPadding="false"
+                    android:layout_height="175dp" />
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:background="@null"
+                    android:layout_below="@+id/viewpager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    app:ci_drawable="@drawable/white_radius"
+                    app:ci_drawable_unselected="@drawable/grey_radius" />
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/ViewModel_Alert" />
+                <ViewStub
+                    android:id="@+id/viewStubBrowse"
+                    android:inflatedId="@+id/stubViewBrowse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubNewReleases"
+                    android:inflatedId="@+id/stubViewNewReleases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubRecentlyPlayed"
+                    android:inflatedId="@+id/stubViewRecentlyPlayed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubPopular"
+                    android:inflatedId="@+id/stubViewPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubArtists"
+                    android:inflatedId="@+id/stubViewArtists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+	                android:id="@+id/viewStubProduct"
+	                android:inflatedId="@+id/stubViewProduct"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStub"
+                    android:inflatedId="@+id/subView"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout="@layout/EmptyStateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+                <View
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

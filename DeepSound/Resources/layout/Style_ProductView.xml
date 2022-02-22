@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:layout_margin="@dimen/spacing_middle"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1.5dp">
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+	    android:orientation="vertical">
+		 
+        <ImageView
+			android:id="@+id/image"
+			android:layout_width="match_parent"
+			android:layout_height="120dp" 
+            android:src="@drawable/imageplacholder"
+			android:scaleType="centerCrop"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="title" 
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:lines="2"
+			android:maxLines="2"
+			android:gravity="center"/>
+
+		<TextView
+			android:id="@+id/price"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="$1200" 
+			android:textSize="14sp"
+			android:gravity="center"
+			android:textColor="@color/accent"/>
+         
+        <androidx.appcompat.widget.AppCompatButton
+	        android:id="@+id/AddButton"
+	        android:layout_below="@+id/Resetbutton"
+	        android:background="@drawable/follow_button_profile_friends_pressed"
+	        android:layout_height="36dp"
+	        android:layout_width="match_parent"
+	        android:padding="5dp"
+	        android:forceDarkAllowed="false"
+	        style="@style/TextAppearance.MaterialComponents.Body1"
+	        android:text="@string/Lbl_AddToCart"
+	        android:textColor="@color/white"
+	        android:textSize="12sp"
+	        android:clickable="true"
+	        android:layout_marginEnd="30dp"
+	        android:layout_marginStart="30dp"
+	        android:layout_marginTop="19dp"
+	        android:gravity="center"
+	        android:layout_marginBottom="10dp" />
+		 
+    </LinearLayout>
+	
+	<LinearLayout
+		android:layout_margin="10dp"
+		android:paddingStart="13dp"
+		android:paddingTop="2dp"
+		android:paddingBottom="6dp"
+		android:paddingEnd="13dp"
+		android:layout_alignParentBottom="true"
+		android:layout_width="wrap_content"
+		android:backgroundTint="#B3000000"
+		android:background="@drawable/shape_radius_btn"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:id="@+id/catText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="none"
+			android:lines="1"
+			android:forceDarkAllowed="false"
+			android:textColor="@color/accent"
+			android:textSize="13dp"
+			android:layout_marginTop="5dp"
+			android:focusable="false"
+			android:clickable="false" /> 
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

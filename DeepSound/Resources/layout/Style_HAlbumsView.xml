@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainliner_container"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:clickable="true"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:paddingStart="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingEnd="8dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/Image_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/imagedisk"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="58dp"
+            android:layout_centerVertical="true"
+            android:forceDarkAllowed="false"
+            android:background="@drawable/circle_drawableAccent"
+            android:layout_width="80dp"
+            android:layout_height="100dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:translationZ="2dp"
+            android:layout_gravity="center"
+            android:layout_width="115dp"
+            android:layout_height="110dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="9dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="3dp"
+            app:cardElevation="1.5dp">
+            <ImageView
+                android:id="@+id/imageSound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:transitionName="Image"
+                android:src="@drawable/imageplacholder"
+                android:clickable="false"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:translationZ="4dp"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="85dp"
+            android:translationY="-7dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ActionButton1"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="-2dp"
+            android:forceDarkAllowed="false"
+            android:background="@drawable/circlegradient">
+            <ImageView
+                android:layout_marginStart="1dp"
+                android:foreground="@drawable/custom_ripple"
+                android:id="@+id/Image"
+                android:layout_gravity="center"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:tint="@color/white"
+                android:src="@drawable/icon_play_action_vector"
+                android:gravity="center" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imagedisk"
+            android:clickable="false"
+            android:focusable="false"
+            android:typeface="normal"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/seconderyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/imagedisk"
+            android:layout_below="@+id/titleTextView"
+            android:textColor="#999"
+            android:textSize="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:clickable="false" />
+        <TextView
+            android:forceDarkAllowed="false"
+            android:background="@drawable/shape_radius_gradient_btn2"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="9dp"
+            android:id="@+id/image_countSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_below="@+id/seconderyText"
+            android:layout_toEndOf="@+id/imagedisk"
+            android:textColor="@color/white"
+            android:typeface="normal"
+            android:textSize="13dp"
+            android:paddingStart="9dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center" />
+
+        <TextView
+            android:backgroundTint="#777"
+            android:background="@drawable/shape_radius_btn"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="10dp"
+            android:text="0.00"
+            android:visibility="visible"
+            android:id="@+id/badge2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_below="@+id/seconderyText"
+            android:layout_toEndOf="@+id/image_countSound"
+            android:textColor="@color/white"
+            android:typeface="normal"
+            android:textSize="13dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center" />
+
+        <TextView
+            android:background="@drawable/shape_radius_gradient_btn3"
+            android:forceDarkAllowed="false"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="10dp"
+            android:text="0.00"
+            android:visibility="gone"
+            android:id="@+id/badge3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_below="@+id/seconderyText"
+            android:layout_toEndOf="@+id/badge2"
+            android:textColor="@color/white"
+            android:typeface="normal"
+            android:textSize="13dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</LinearLayout>

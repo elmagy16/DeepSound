@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_pro_layout"
+    android:layout_width="match_parent"
+    android:background="?attr/selectableItemBackground"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/card_pro_pic"
+        android:scaleType="centerCrop"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/no_profile_image_circle"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp" />
+    <TextView
+        android:id="@+id/card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/card_pro_pic"
+        android:textSize="15sp" />
+    <TextView 
+        android:id="@+id/card_dist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_name"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/card_pro_pic"
+        android:textSize="12sp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:id="@+id/cont"
+        android:textSize="13sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/follow_button_profile_friends"
+        android:tag="false"
+        android:paddingTop="1dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="@string/Lbl_Follow"
+        android:forceDarkAllowed="false"
+        android:textColor="@color/accent" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="?attr/colorDivider"
+        android:layout_below="@id/card_pro_pic" />
+</RelativeLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorPrimary">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_gravity="top"
+			android:background="@drawable/linear_gradient_drawable"
+			app:theme="@style/ToolbarTheme"
+			app:titleTextAppearance="@style/Toolbar.TitleText"/>
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="none"
+		android:scrollingCache="true">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:paddingTop="@dimen/spacing_large">
+			 
+			<!--email_on_follow_user-->
+			<LinearLayout
+				android:id="@+id/follow_userLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_follow_user"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_follow_user"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+			
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+
+			<!--email_on_liked_track-->
+			<LinearLayout
+				android:id="@+id/liked_trackLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_liked_track"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_liked_track"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+		
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+
+			<!--email_on_liked_comment-->
+			<LinearLayout
+				android:id="@+id/liked_commentLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_liked_comment"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_liked_comment"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			 
+			<!--email_on_artist_status_changed-->
+			<LinearLayout
+				android:id="@+id/artist_status_changedLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_artist_status_changed"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_artist_status_changed"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			 
+			<!--email_on_receipt_status_changed-->
+			<LinearLayout
+				android:id="@+id/receipt_status_changedLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_receipt_status_changed"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_receipt_status_changed"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			 
+			<!--email_on_new_track-->
+			<LinearLayout
+				android:id="@+id/new_trackLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_new_track"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_new_track"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			 
+			<!--email_on_comment_mention-->
+			<LinearLayout
+				android:id="@+id/comment_mentionLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_comment_mention"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_comment_mention"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			 
+			<!--email_on_comment_replay_mention-->
+			<LinearLayout
+				android:id="@+id/comment_replay_mentionLayout"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:background="?attr/selectableItemBackground"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingStart="@dimen/spacing_large"
+				android:paddingEnd="@dimen/spacing_large">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/Lbl_email_on_comment_replay_mention"
+					android:textSize="15sp"
+					android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+				<View
+					android:layout_width="@dimen/spacing_large"
+					android:layout_height="wrap_content" />
+
+				<Switch
+					android:id="@+id/Switch_comment_replay_mention"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					app:thumbTint="@color/accent" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="@dimen/spacing_large"
+				android:layout_marginEnd="@dimen/spacing_large"
+				android:background="?attr/colorDivider" />
+			  
+			<View 
+				android:layout_height="?android:attr/actionBarSize"
+				android:layout_width="match_parent" />
+
+			<com.google.android.gms.ads.doubleclick.PublisherAdView
+				android:id="@+id/multiple_ad_sizes_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+				app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout> 
